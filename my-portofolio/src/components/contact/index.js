@@ -124,22 +124,19 @@ const ContactButton = styled.input`
 
 const Contact = () => {
 
-  //hooks
   const [open, setOpen] = React.useState(false);
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+
+    emailjs.sendForm('service_nsfj3ao', 'template_w358pvn', form.current, '1N9AteHKvU2qmAhK-')
       .then((result) => {
-        setOpen(true);
-        form.current.reset();
+        console.log(result.text);
       }, (error) => {
         console.log(error.text);
       });
-  }
-
-
+  };
 
   return (
     <Container>
@@ -150,7 +147,6 @@ const Contact = () => {
           <ContactTitle>Email Me!</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
           <ContactInputMessage placeholder="Message" rows="4" name="message" />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
@@ -164,6 +160,7 @@ const Contact = () => {
       </Wrapper>
     </Container>
   )
+
 }
 
 export default Contact
