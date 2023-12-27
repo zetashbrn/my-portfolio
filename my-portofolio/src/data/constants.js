@@ -192,4 +192,16 @@ export const Bio = {
       category: "data analytic",
       github: "https://github.com/zetashbrn/milk-prediction",
     },
+    {
+      id: 5,
+      title: "WanderTrip",
+      description:
+        "WanderTrip is an application that can help users find a hotel based on preferences such as location, facilities, price using the search feature available and there are reviews and ratings of previous users in each hotel.",
+      image:
+        "https://drive.google.com/uc?export=view&id=1bMOxDRcv5H6mepnMQZlYrGIazQK714Bn",
+      tags: ["Java", "Android Studio"],
+      roles: "App Developer",
+      category: "android app",
+      github: "https://github.com/Robieeee/ProjectSemes5",
+    },
   ];
